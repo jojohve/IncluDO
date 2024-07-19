@@ -46,12 +46,16 @@ var course1 = new Course("Metalmeccanica Base", "Corso dedicato all'apprendiment
 var course2 = new Course("Industria1", "Corso di apprendimento delle leggi basi per poter inserire il candidato in un ufficio", "Industria", "1 anno");
 var company1 = new Company("GTO", "Metalmeccanica", "Azienda che da più di 50 anni distribuisce semiassi in tutta europa.", ["Operaio", "Magazziniere"]);
 var company2 = new Company("Uffici Generali", "Industria", "Azienda che opera nel settore delle telecomunicazioni internazionali.", ["Impiegato"]);
+console.log("Initial State:");
 console.log(participant1, participant2, participant3);
 console.log(company1, company2);
+console.log("\n--- Enrollment Process ---");
 participant1.enrollInCourse(course1);
 participant2.enrollInCourse(course1);
 participant3.enrollInCourse(course2);
+console.log("\n--- Job Offer ---");
 company1.offerPosition(participant1, "Operaio");
 company1.offerPosition(participant2, "Magazziniere");
 company2.offerPosition(participant3, "Impiegato");
+console.log("\nFinal State:");
 console.log(course1, course2);
